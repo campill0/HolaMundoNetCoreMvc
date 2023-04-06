@@ -1,0 +1,31 @@
+﻿
+@using static HolaMundoNetCoreMvc.Controllers.OperacionMathController
+@model OperacionMathViewModel;
+@{
+    ViewData["Title"] = "Resultado operación.";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>@Model.Operando1 
+    @switch (Model.Operacion){
+        case Operacion.SUMA:
+            <span>+</span>
+        break;
+        case Operacion.RESTA:
+            <span>-</span>
+        break;
+        case Operacion.MULTIPLICACION:
+            <span>*</span>
+        break;
+        case Operacion.DIVISION:
+            <span>/</span>
+        break;
+        case Operacion.EXPONENCIACION:
+            <span>^</span>
+        break;
+    break;
+
+    }
+    @Model.Operando2 = @Model.Resultado
+</p>
+<a class="btn btn-primary" href="@Url.Action("Index", "OperacionMath")">Volver</a>

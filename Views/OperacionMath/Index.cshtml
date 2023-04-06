@@ -1,0 +1,33 @@
+﻿@model OperacionMathViewModel;
+@{
+    ViewData["Title"] = "Calculadora";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>En esta página podras hacer operaciones matemáticas con dos operandos</br>Introduce 2 valores y pulsa el botón correspondiente para realizar una operacion matemática con ellos.</p>
+<form asp-action="RealizarOperacion" asp-controller="OperacionMath" method="post" >
+    <div class="row">
+        <div class="col-md-auto">
+            <input class="form-control" type="text" asp-for="Operando1" />
+            <span asp-validation-for="Operando1" class="text-danger"></span>
+        </div>
+        <div class="col-md-auto">
+            <input class="form-control" type="text" asp-for="Operando2" />
+            <span asp-validation-for="Operando2" class="text-danger"></span>
+        </div>
+        <div class="col-md-auto">
+            <select class="form-control form-select" asp-items="Model.Operaciones" asp-for="Operacion">
+            </select>
+        </div>
+        <div class="col-md-auto">
+            <button class="btn btn-primary" type="submit">Realizar operación</button>
+        </div>
+    </div>
+
+   
+   
+
+    
+   
+   
+</form>
