@@ -2,8 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 namespace HolaMundoNetCoreMvc.Attributes
 {
-    
-
     public class NoZeroDoubleAttribute : ValidationAttribute
     {
         public HolaMundoNetCoreMvc.Controllers.OperacionMathController.Operacion Operacion { get; set; }

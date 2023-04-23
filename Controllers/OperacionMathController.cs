@@ -42,6 +42,7 @@ namespace HolaMundoNetCoreMvc.Controllers
 
             };
         }
+        
         public IActionResult RealizarOperacion(OperacionMathViewModel modelo)
         {
             if (!ModelState.IsValid)
@@ -60,8 +61,5 @@ namespace HolaMundoNetCoreMvc.Controllers
             }
             return View("~/Views/OperacionMath/Result.cshtml", modelo);
         }
-
-
-     
     }
 }
